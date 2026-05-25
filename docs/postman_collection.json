@@ -1,0 +1,50 @@
+{
+  "info": {
+    "name": "API Agregação - Clima",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "health"]
+        }
+      }
+    },
+    {
+      "name": "Cidades por Estado",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/cidades/CE?limite=5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "cidades", "CE"],
+          "query": [
+            { "key": "limite", "value": "5" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Clima por Cidade",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/clima/Fortaleza",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "v1", "clima", "Fortaleza"]
+        }
+      }
+    }
+  ]
+}
